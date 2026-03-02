@@ -1,0 +1,18 @@
+ID: TC_API_002
+Title: Login sem senha
+Preconditions:
+ - API https://reqres.in/ disponível
+ - Email válido conhecido
+Request:
+POST /api/login
+Body:
+{
+  "email": "eve.holt@reqres.in",
+}
+Steps:
+1. Enviar requisição POST /api/login sem campo password
+2. Capturar response
+Expected Result:
+ - Status code 400 Bad Request
+ - Response body contém mensagem "Missing password"
+ - Tempo de resposta < 2000ms

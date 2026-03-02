@@ -1,0 +1,12 @@
+ID: CT006
+Title: Usuário não encontrado
+Endpoint: POST /api/users
+Preconditions: 
+ - API ReqRes disponível
+ - Usuário não existe na base de dados pública
+Steps:
+1. Enviar GET https://reqres.in/api/users/name/10
+2. Capturar resposta
+Expected Result:
+ - Status code 404 not found
+ - Tempo de resposta < 2000ms

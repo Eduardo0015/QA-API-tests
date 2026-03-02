@@ -1,0 +1,20 @@
+ID: TC_API_001
+Title: Login de usuário com credencial e token válidos
+Preconditions: 
+ - API https://reqres.in/ disponível
+ - Credenciais válidas conhecidas (email e senha de teste)
+Request:
+POST /api/login
+Body:
+{
+  "email": "eve.holt@reqres.in",
+  "password": "cityslicka"
+}
+Steps:
+1. Enviar requisição POST /api/login
+2. Capturar response
+Expected Result:
+ - Status code 200 Ok
+ - Body contém "token" não vazio
+ - Content-type = application/json
+ - Tempo de resposta < 2000ms

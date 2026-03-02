@@ -1,0 +1,13 @@
+ID: CT002
+Title: Validar retorno de usuário inexistente
+Endpoint: GET /api/users/999
+Preconditions:
+ - API ReqRes Disponível
+ - Usuário com ID 999 não existe na base pública
+Steps:
+1. Enviar requisição GET https://reqres.in/api/users/999
+2. Capturar resposta da API
+Expected Result:
+ - Status code 404 Not Found
+ - Body vazio
+ - Tempo de resposta < 2000ms
