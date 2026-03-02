@@ -1,0 +1,15 @@
+ID: TC_API_004
+Title: Login com campos obrigatórios vazios
+Preconditions:
+ - API https://reqres.in/ disponível
+Request:
+POST /api/login
+Body: 
+{}
+Steps:
+1. Enviar requisição POST /api/login com body vazio
+2. Capturar Response
+Expected Result:
+ - Status Code 400 Bad Request
+ - Response body contém mensagem "Missing email or username"
+ - Tempo de resposta < 2000ms

@@ -1,0 +1,26 @@
+ID: CT004
+Título: Criar novo usuário válido (Happy Path)
+
+Endpoint: POST /api/users
+
+Pré-condições:
+- API ReqRes acessível
+- Header x-api-key configurado
+
+Passos:
+1. Enviar POST https://reqres.in/api/users
+2. Body JSON:
+   {
+     "name": "Eduardo",
+     "job": "QA"
+   }
+3. Capturar resposta
+
+Resultado esperado:
+- Status code 201 Created
+- Body contém "name" = "Eduardo"
+- Body contém "job" = "QA"
+- Body contém campo "id"
+- Body contém campo "createdAt"
+- Content-Type = application/json
+- Tempo de resposta < 2000 ms

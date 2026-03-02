@@ -1,0 +1,19 @@
+ID: TC_API_003
+Title: Login com email inválido
+Preconditions:
+ - API https://reqres.in/ disponível
+ - Email diferente do listado na documentação
+Request:
+POST /api/login
+Body:
+{
+  "email": "BdayBoy@reqres.in",
+  "password": "cityslicka"
+}
+Steps:
+1. Enviar requisição POST /api/login com email não cadastrado na base de dados
+2. Capturar Response
+Expected Result:
+ - Status code 400 Bad Request
+ - Response body contém mensagem "user not found"
+ - Tempo de resposta < 2000ms
